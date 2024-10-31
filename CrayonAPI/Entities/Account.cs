@@ -7,6 +7,6 @@
         public required string AccountName { get; set; }
 
         public required Customer Customer { get; set; }
-        public ICollection<Subscription> Softwares { get; set; } = [];
+        public ICollection<Subscription> Subscriptions { get; set; } = [];
     }
 }
