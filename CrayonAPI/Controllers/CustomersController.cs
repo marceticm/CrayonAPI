@@ -16,7 +16,7 @@ namespace CrayonAPI.Controllers
                 _customerService = customerService;
         }
 
-        [HttpPost]
+        [HttpPost] // TO DO: Authorize this endpoint so only admins can create customers
         public async Task<ActionResult<Customer>> CreateCustomer([FromBody] CustomerCreateDto customerDto)
         {
             if (customerDto == null)
