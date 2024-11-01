@@ -5,5 +5,6 @@ namespace CrayonAPI.Interfaces
     public interface IAccountRepository
     {
         Task<IEnumerable<Account>> GetAccounts(int customerId);
+        Task<Account?> GetAccount(int accountId);
     }
 }

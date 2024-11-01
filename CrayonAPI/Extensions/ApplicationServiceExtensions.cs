@@ -16,6 +16,9 @@ namespace CrayonAPI.Extensions
 
             services.AddScoped<ICCPService, CCPService>();
 
+            services.AddScoped<ISubscriptionRepository, SubscriptionRepository>();
+            services.AddScoped<ISubscriptionService, SubscriptionService>();
+
             return services;
         }
     }

@@ -19,5 +19,11 @@ namespace CrayonAPI.Data
                 .Where(x => x.CustomerId == customerId)
                 .ToListAsync();
         }
+
+        public async Task<Account?> GetAccount(int accountId)
+        {
+            return await _context.Accounts
+                .FirstOrDefaultAsync(a => a.Id == accountId);
+        }
     }
 }

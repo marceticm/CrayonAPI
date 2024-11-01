@@ -1,6 +1,6 @@
 ﻿namespace CrayonAPI.Enums
 {
-    public enum SoftwareState
+    public enum SubscriptionState
     {
         Inactive,
         Active

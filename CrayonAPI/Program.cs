@@ -1,5 +1,6 @@
 using CrayonAPI.Data;
 using CrayonAPI.Extensions;
+using CrayonAPI.Middleware;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,9 +15,11 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<CrayonDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+// Configure the HTTP request pipeline.
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+app.UseMiddleware<ExceptionMiddleware>();
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
