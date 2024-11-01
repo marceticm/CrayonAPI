@@ -2,7 +2,7 @@
 using CrayonAPI.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace CrayonAPI.UnitTests
+namespace CrayonAPI.UnitTests.Data
 {
     public class AccountRepositoryTests
     {

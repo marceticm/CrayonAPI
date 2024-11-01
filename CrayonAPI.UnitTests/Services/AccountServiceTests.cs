@@ -3,12 +3,12 @@ using CrayonAPI.Interfaces;
 using CrayonAPI.Services;
 using Moq;
 
-namespace CrayonAPI.UnitTests
+namespace CrayonAPI.UnitTests.Services
 {
     public class AccountServiceTests
     {
         [Fact]
-        public async Task GetAccountsByCustomerId_ReturnsCorrectAccounts()
+        public async Task GetAccount_WhenCalled_ReturnsCorrectAccounts()
         {
             // Arrange
             var customerId = 1;
