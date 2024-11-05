@@ -1,0 +1,266 @@
+{
+	"info": {
+		"_postman_id": "f44d66a5-30c3-4727-af13-f019e301d966",
+		"name": "Crayon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28686229"
+	},
+	"item": [
+		{
+			"name": "Account GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7069/api/accounts/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7069",
+					"path": [
+						"api",
+						"accounts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"test customer 1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7069/api/customers",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7069",
+					"path": [
+						"api",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CCPServices GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7069/api/ccpservices",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7069",
+					"path": [
+						"api",
+						"ccpservices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Account POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerId\": 1,\r\n    \"accountName\": \"Primary Account\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7069/api/accounts",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7069",
+					"path": [
+						"api",
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subscription POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\": 1,\r\n    \"serviceCode\": 3,\r\n    \"quantity\": 10,\r\n    \"validTo\": \"2026-12-31\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7069/api/subscriptions/customer/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7069",
+					"path": [
+						"api",
+						"subscriptions",
+						"customer",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subscriptions GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7069/api/subscriptions/customer/1/account/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7069",
+					"path": [
+						"api",
+						"subscriptions",
+						"customer",
+						"1",
+						"account",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SubscriptionsQuantity PATCH",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "15",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7069/api/subscriptions/customer/1/subscription/1/quantity",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7069",
+					"path": [
+						"api",
+						"subscriptions",
+						"customer",
+						"1",
+						"subscription",
+						"1",
+						"quantity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CancelSubscription PATCH",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7069/api/subscriptions/customer/1/subscription/1/cancel",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7069",
+					"path": [
+						"api",
+						"subscriptions",
+						"customer",
+						"1",
+						"subscription",
+						"1",
+						"cancel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ExtendSubscription PATCH",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\"2031-12-31T00:00:00Z\"",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7069/api/subscriptions/customer/1/subscription/1/extend",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7069",
+					"path": [
+						"api",
+						"subscriptions",
+						"customer",
+						"1",
+						"subscription",
+						"1",
+						"extend"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
